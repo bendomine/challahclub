@@ -1,0 +1,224 @@
+* {
+	font-family: 'domineregular', sans-serif;
+}
+body {
+	margin: 0px;
+	background-color: #d7d2d6;
+	overscroll-behavior: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+/* #topMenu {
+	background-color: #591902;
+	position: sticky;
+	color: #f2d5bb;
+	padding: 10px;
+}
+#topMenu h2,
+#topMenu h3 {
+	padding: 10px;
+	display: inline;
+}
+#topMenu h3:last-child {
+	float: right;
+	margin: 0;
+	margin-top: 2.8px;
+	padding: 0px;
+	text-decoration: underline;
+}
+#topMenu h2:not(:last-child),
+#topMenu h3:not(:last-child) {
+	border-right: 1.5px solid black;
+	margin-top: 5.6px !important;
+} */
+
+#topBanner {
+	text-align: center;
+	background-image: url('challah.png');
+	background-size: cover;
+	background-position: 0px -500px;
+	padding: 80px;
+	background-attachment: fixed;
+}
+#topBanner h1 {
+	color: #d7d2d6;
+	margin: 0;
+	font-size: 50px;
+}
+#topBanner button {
+	font-size: 25px;
+	margin-top: 15px;
+	user-select: none;
+	cursor: pointer;
+	color: #f2d5bb;
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #f2d5bb;
+	transition: background-color 0.2s;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#topBanner button:hover {
+	background-color: #591902;
+}
+
+#aboutBanner {
+	background-color: #d9d0d3;
+	border-top: 5px solid #591902;
+	padding: 10px;
+	color: #591902;
+}
+#aboutBanner span {
+	text-align: center;
+}
+#aboutBanner h1 {
+	font-size: 40px;
+	margin: 0;
+}
+#aboutBanner p {
+	font-size: 17px;
+	color: black;
+}
+#aboutBanner a {
+	color: #732c02;
+}
+
+#FAQs {
+	background-color: #591902;
+	border-top: 5px solid #bf6e3f;
+	border-bottom: 5px solid #bf6e3f;
+	color: #f2d2b6;
+	padding: 10px;
+}
+#FAQs span {
+	text-align: center;
+}
+#FAQs h1 {
+	font-size: 40px;
+	margin: 0;
+}
+#FAQs p {
+	color: #d9d0d3;
+}
+#FAQs a {
+	color: #f2d2b6;
+}
+
+#order {
+	background-image: url('challah.png');
+	background-size: cover;
+	padding: 60px;
+	background-attachment: fixed;
+}
+#order form {
+	position: relative;
+	left: 50%;
+	background-color: #d9d0d3;
+	width: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	padding: 20px;
+}
+#order form span {
+	text-align: center;
+	color: #591902;
+}
+#order form * {
+	margin: 7px;
+}
+#order form span h1 {
+	color: #591902;
+	margin: auto;
+}
+#order form input[type='text'],
+#order form input[type='email'],
+#order form input[type='number'] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #732c02;
+	transition: border-bottom 0.2s;
+}
+#order form input[type='text']:focus,
+#order form input[type='email']:focus,
+#order form input[type='number']:focus {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 3px solid #732c02;
+}
+#order form input[type='text']*:focus,
+#order form input[type='email']*:focus,
+#order form input[type='number']*:focus {
+	outline: none;
+}
+#order form input[type='number'] {
+	width: 30px;
+}
+#order form input[type='email'] {
+	width: 270px;
+}
+#order form input[type='submit'] {
+	font-size: 20px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #732c02;
+	color: #732c02;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+#order form input[type='submit']:not(:disabled):hover {
+	background-color: #f2d2b6;
+}
+#order form input:disabled {
+	background-color: rgb(190, 190, 190);
+	cursor: default;
+}
+
+#footer {
+	border-top: 5px solid #591902;
+}
+#footer p {
+	margin: 10px;
+	font-size: 17px;
+}
+
+#orderSuccess,
+#orderFail {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: #d9d0d3;
+	padding: 20px;
+	border-radius: 5px;
+	color: #591902;
+}
+#orderSuccessBack,
+#orderFailBack {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#orderSuccess button,
+#orderFail button {
+	font-size: 20px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #732c02;
+	color: #732c02;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+#orderSuccess button:hover,
+#orderFail button:hover {
+	background-color: #f2d2b6;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Challah Club</title>
+		<link rel="stylesheet" href="fonts/domineFont.css" />
+		<link rel="stylesheet" href="home.css" />
+	</head>
+	<body>
+		<!-- <div id="topMenu">
+			<h2>Challah Club</h2>
+			<h3>About</h3>
+			<h3>FAQs</h3>
+			<h3>Order</h3>
+			<h3>Back to Top</h3>
+		</div> -->
+		<div id="topBanner">
+			<h1>KJHS Challah Club</h1>
+			<a href="#order"><button>Order Now!</button></a>
+		</div>
+		<div id="aboutBanner">
+			<span><h1>About</h1></span>
+			<h2>What is challah?</h2>
+			<p>
+				Challah is a bread traditionally eaten by Jews on Friday to celebrate the coming of
+				Shabbat, the day of rest. That doesn't mean it's only for Jewish people, though!
+				Challah is delicious and everyone can enjoy it.
+			</p>
+			<h2>What is Challah Club?</h2>
+			<p>
+				Challah Club is a service that simplifies ordering challah (from
+				<a href="https://www.irvprem.com">Irving's Premium Challah</a>) each week. Your
+				order will be delivered to Kehillah on Friday during school, and all orders through
+				Challah Club receive a 40% discount!
+			</p>
+		</div>
+		<div id="FAQs">
+			<span><h1>FAQs</h1></span>
+			<h2>What kinds of challah do you have?</h2>
+			<p>We offer plain, sesame, and poppy seed challahs.</p>
+			<h2>How do I pay?</h2>
+			<p>
+				You can choose to pay either with Venmo or in person. If you choose Venmo, please
+				make it out to <strong>@abby-domine</strong>.
+			</p>
+			<p>If you choose in person, just bring money to school.</p>
+			<h2>How do you order for the semester?</h2>
+			<p>
+				If you don't want to keep ordering each week, order for the semester instead! If
+				you're interested, please send me an email at
+				<a href="mailto:bdomine2024@kehillahstudent.org">bdomine2024@kehillahstudent.org</a
+				>.
+			</p>
+			<h2>Can I order challah for the staff?</h2>
+			<p>
+				Sure! Just check the box when ordering, and put any special instructions in the
+				comments box.
+			</p>
+			<h2>What's the price of one challah?</h2>
+			<p>Each challah is $6.75.</p>
+			<span
+				><h3>
+					Anything else? Leave any special instructions in the comments box, and send me
+					an email (<a href="mailto:bdomine2024@kehillahstudent.org"
+						>bdomine2024@kehillahstudent.org</a
+					>) if you have any questions!
+				</h3></span
+			>
+		</div>
+		<div id="order">
+			<form id="orderForm">
+				<span><h1>Order</h1></span>
+				<label for="email">Kehillah email: </label>
+
+				<!-- This pattern thing is a regex which matches any Kehillah email address. If the kehillah email
+			addresses get changed, this will also need to be changed. -->
+				<input
+					type="email"
+					name="email"
+					required
+					pattern="[\w\-]*20\d\d@kehillahstudent\.org|[\w\-]*@kehillah\.org"
+					placeholder="xxxxxxxxxxxx@kehillahstudent.org"
+				/>
+				<br />
+				<label for="numPlain">Number of plain challahs: </label>
+				<input type="number" name="numPlain" required min="0" placeholder="0" />
+				<br />
+				<label for="numPoppy">Number of poppy challahs: </label>
+				<input type="number" name="numPoppy" required min="0" placeholder="0" />
+				<br />
+				<label for="numSesame">Number of sesame challahs: </label>
+				<input type="number" name="numSesame" required min="0" placeholder="0" />
+				<br />
+				<label for="isForStaff">Is this order for staff?</label>
+				<input type="checkbox" name="isForStaff" />
+				<br />
+				<label for="payMethod">Intended payment method: </label>
+				<select name="payMethod">
+					<option value="Venmo">Venmo</option>
+					<option value="InPerson">In person</option>
+				</select>
+				<br />
+				<label for="comment">Other comments: </label>
+				<input type="text" name="comment" />
+				<br />
+				<label for="submit" id="costLabel">Order cost: $0.00</label>
+				<input type="submit" value="Submit Order" name="submit" />
+			</form>
+		</div>
+		<div id="orderSuccessBack" style="display: none">
+			<div id="orderSuccess">
+				<h1>Order Successful!</h1>
+				<h2>Don't forget to pick up your challah on Friday!</h2>
+				<h2 id="paymentText"></h2>
+				<button
+					onclick="document.getElementById('orderSuccessBack').style.display = 'none'"
+				>
+					Close
+				</button>
+			</div>
+		</div>
+		<div id="orderFailBack" style="display: none">
+			<div id="orderFail">
+				<h1>Error: Order Unsuccessful</h1>
+				<h2 id="errorText"></h2>
+				<h2>
+					Please report this error! Email a screenshot and circumstances to
+					<a href="mailto:bdomine2024@kehillahstudent.org"
+						>bdomine2024@kehillahstudent.org</a
+					>
+				</h2>
+				<button onclick="document.getElementById('orderFailBack').style.display = 'none'">
+					Close
+				</button>
+			</div>
+		</div>
+		<div id="footer">
+			<p>
+				Site made by Ben Domine (<a href="mailto:bdomine2024@kehillahstudent.org"
+					>bdomine2024@kehillahstudent.org</a
+				>), v1.0. | Font used:
+				<a
+					href="https://fonts.google.com/specimen/Domine?preview.text_type=paragraph"
+					target="_blank"
+					rel="noreferrer noopener"
+					>Domine</a
+				>, the only good font. | This site is not affiliated with
+				<a href="https://www.kehillah.org" target="_blank" rel="noreferrer noopener"
+					>kehillah.org</a
+				>. |
+				<a href="#topBanner">Back to top</a>
+			</p>
+		</div>
+	</body>
+	<script src="main.js"></script>
+</html>
