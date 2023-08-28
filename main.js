@@ -1,6 +1,6 @@
 // IMPORTANT!! If you change the Google script, you'll need to re-deploy it and replace the url below with the new one.
 const FORM_URL =
-	'https://script.google.com/macros/s/AKfycbyzN1n2BywIIjrdvLAFnPbuxfFmH3Cw-iG5Pwef_Op55RgtVETuVP-OMMfWYmozmU6sbg/exec';
+	'https://script.google.com/macros/s/AKfycbxQbNMJ3U5kBNaw3jeStzfNQfi5fHfsYaoxJ5JhT0NNSvKr1qlpbTFdLUhsBq0pZLwz5w/exec';
 
 let request;
 
